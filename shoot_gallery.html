@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8"/>
+	<head>
+		<title>普吉体验潜水,普吉潜水OW,Phuket Dive Buddy DSD课程,Phuket Dive Buddy OW课程</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a class="home" href="index.html"></a>
+			</div>
+			<div class="language">
+				<a href="en/shoot_gallery.html">English Version</a>
+			</div>
+			<nav>
+				<div>
+					<a href="index.html">首页</a>
+					<a href="dsd.html">PADI 体验潜水(DSD)</a>
+					<a href="ow.html">PADI OW 潜水</a>
+					<a href="dive_gallery.html">OW 潜水图片</a>
+					<a href="shoot_gallery.html" class="current">射击图片</a>
+				</div>
+			</nav>
+		</header>
+		<div>
+			<div class="image-wraper">
+				<div class="image">
+					<a title="前一张" class="prev"></a>
+					<a title="后一张" class="next"></a>
+					<div class="img"  data-image="DSC_0107.jpg"></div>
+					<div class="loading"></div>
+				</div>
+				<div class="name">DSC_0107</div>
+				<div class="desc">DSC_0107</div>
+			</div>
+			<div class="image-list">
+				<a class="prev" title="前一个"></a>
+				<a class="next" title="下一个"></a>
+				<div>
+					<ul>
+						<li class="current"><img src="images/shoot_400/DSC_0107.jpg" title="DSC_0107"data-desc="这是上次去去皇帝岛的船,这次出海碰见了大海龟非常的开心"></li>
+						<li><img src="images/shoot_400/IMG_1629.jpg" title="IMG_1629"></li>
+						<li><img src="images/shoot_400/IMG_8813.jpg" title="IMG_8813"></li>
+						<li><img src="images/shoot_400/IMG_8848.jpg" title="IMG_8848"></li>
+						<li><img src="images/shoot_400/IMG_8850.jpg" title="IMG_8850"></li>
+						<li><img src="images/shoot_400/IMG_8852.jpg" title="IMG_8852"></li>
+						<li><img src="images/shoot_400/IMG_8885.jpg" title="IMG_8885"></li>
+						<li><img src="images/shoot_400/IMG_8888.jpg" title="IMG_8888"></li>
+						<li><img src="images/shoot_400/IMG_8901.jpg" title="IMG_8901"></li>
+						<li><img src="images/shoot_400/IMG_8924.jpg" title="IMG_8924"></li>
+						<li><img src="images/shoot_400/IMG_8928.jpg" title="IMG_8928"></li>
+						<li><img src="images/shoot_400/IMG_8940.jpg" title="IMG_8940"></li>
+						<li><img src="images/shoot_400/IMG_8945.jpg" title="IMG_8945"></li>
+						<li><img src="images/shoot_400/IMG_8959.jpg" title="IMG_8959"></li>
+						<li><img src="images/shoot_400/IMG_9018.jpg" title="IMG_9018"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div>
+				<div>
+					<span></span>
+					<span class="webchat">微信号:245454280</span>
+				</div>
+				<div>
+					<a href="mailto:not-found@qq.com" class="email">not-found@qq.com</a>
+					<a href="#" class="phone">13718354523</a>
+					<a href="#" class="taobao">淘宝网店</a>
+				</div>
+				<div>
+					<a href="#" class="facebook">Facebook</a>
+					<a href="#" class="twitter">Twitter</a>
+					<a href="#" class="sina">新浪微博</a>
+				</div>
+			</div>
+		</footer>
+		<!--[if lt IE 9]>
+		<div id="ie_fix">您在使用过时的浏览器.为了提高您的浏览效率请<a href="http://browsehappy.com">升级浏览器</a>或者<a href="http://www.google.com/chromeframe/?redirect=true">使用Google浏览器内嵌框架</a></div>
+		<![endif]-->
+	</body>
+	<script type="text/javascript">
+	$('<img />').attr('src','images/shoot_1024/'+$('.image-wraper .img').data('image')).load(function(){
+		$('.image-wraper .loading').fadeOut();
+		$('.image-wraper .image .img').css('background-image','url("images/shoot_1024/'+$('.image-wraper .img').data('image')+'")');
+	});
+	var image_num = $('.image-list li').length;
+	var total = parseInt(image_num / 5);
+	if (image_num % 5 == 0) {
+		total += 1;
+	}
+	$('.image-list .prev').click(function(){
+		if ($('.image-list ul').position().left == 0) {
+			return false;
+		}
+		$('.image-list ul').css('left',($('.image-list ul').position().left + 999) + 'px');
+	});
+	$('.image-list .next').click(function(){
+		if ($('.image-list ul').position().left == ((total-2) * -999)) {
+			return false;
+		}
+		$('.image-list ul').css('left',($('.image-list ul').position().left - 999) + 'px');
+	});
+	$('.image-list li').click(function(){
+		if ($(this).hasClass('current')) {
+			return false;
+		}
+		$('.image-list li').removeClass('current');
+		$(this).addClass('current');
+		var src = $(this).find('img').attr('src').replace('shoot_400','shoot_1024');
+		var name = $(this).find('img').attr('title');
+		var desc = $(this).find('img').data('desc')||name;
+		$('.image-wraper .loading').fadeIn();
+		$('<img />').attr('src',src).load(function(){
+			$('.image-wraper .loading').fadeOut();
+			$('.image-wraper .image .img').css('background-image','url("' + src + '")');
+			$('.image-wraper .name').html(name);
+			$('.image-wraper .desc').html(desc);
+		});
+	});
+	</script>
+</html>

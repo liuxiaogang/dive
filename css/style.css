@@ -1,0 +1,458 @@
+body {
+    background: #000 url('images/bg.jpg');
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+body>header {
+    background: #000 url('images/nav_bg.jpg');
+}
+body>header .logo a {
+    display: block;
+    height: 60px;
+    width: 100%;
+    background: url('images/logo.png') no-repeat 0 1em;
+    background-size: 100%;
+    padding-top: 1em;
+}
+header>.language {
+    text-align: right;
+    margin-right: 2em;
+    font-size: 13px;
+    color: #FFF;
+}
+header>.language a {
+    color: #FFF;
+}
+header>.language a:hover {
+    text-decoration: underline;
+}
+body>header>nav {
+    background: rgba(255,255,255,.1);
+    margin-top: 8px;
+}
+body>header>nav>a {
+    color: #FFF;
+    border-left: 1px solid #FFF;
+    float: left;
+}
+body>header>nav:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body>header>nav>div {
+    width: 1000px;
+    margin: auto;
+}
+body>header>nav>div:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body>header>nav>div>a {
+    line-height: 3em;
+    float: left;
+    color: #FFF;
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 0 1em;
+    font-weight: bold;
+}
+body>header>nav>div>a:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+body>header>nav>div>a:hover,body>header>nav>div>a.current {
+    color: #FF0;
+    background: #000;
+}
+#important{
+    background: #000;
+    padding-top: .5em;
+}
+#important>div {
+    width: 1000px;
+    margin: auto;
+}
+#important>div>ul {
+    position: relative;
+    height: 400px;
+}
+#important>div>ul>li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 1000px;
+    display: none;
+    background-size: 1000px auto;
+    background-position-x: 0;
+    background-position-y: 50%;
+}
+#important>div>ul>li:first-child{
+    display: block;
+}
+#important nav {
+    width: 112px;
+    margin: 1em auto;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+}
+#important nav a {
+    color: #333;
+    background: #FFF;
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    float: left;
+    margin: 2px;
+    cursor: pointer;
+}
+#important nav:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#important nav a.current,#important nav a:hover {
+    background: #EE0;
+}
+#gallery {
+    background: url('images/splash.jpg') no-repeat 50% 0;
+    padding-top: 1em;
+}
+#gallery>header {
+    width: 1000px;
+    margin: auto;
+    color: #5D5D5D;
+    font-size: 2em;
+}
+#gallery ul {
+    width: 1000px;
+    margin: auto;
+}
+#gallery ul>li {
+    float: left;
+    width: 450px;
+}
+#gallery ul>li:nth-child(2n) {
+    margin-left: 50px;
+}
+#gallery ul>li>header {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 2;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    margin-bottom: 0.5em;
+}
+#gallery ul>li>div>a {
+    display: block;
+    width: 450px;
+    height: 332px;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: auto 400px;
+    background-repeat: no-repeat;
+}
+#gallery ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body>footer {
+    background: url('images/footer_bg.gif');
+    margin-top: 3em;
+    box-shadow: inset 0px -5px 10px 0px rgba(0, 0, 0, 0.8), inset 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+}
+body>footer>div {
+    margin: auto;
+    width: 600px;
+    padding: 30px 0;
+}
+body>footer>div:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body>footer>div>div {
+    float: left;
+    height: 200px;
+}
+body>footer>div>div:first-child>span:first-child {
+    width: 180px;
+    height: 180px;
+    display: block;
+    background: url('images/weixin.jpg');
+    background-size: 180px;
+}
+body>footer>div>div:first-child>span:last-child {
+    color: #FFF;
+    text-align: center;
+    display: block;
+    line-height: 3em;
+}
+body>footer>div>div:last-child,body>footer>div>div:nth-child(2) {
+    margin-left: 30px;
+    padding-top: 24px;
+}
+body>footer>div>div:last-child a,body>footer>div>div:nth-child(2) a {
+    color: #FFF;
+    display: block;
+    line-height: 3em;
+    font-size: 16px;
+    padding-left: 18px;
+    background: no-repeat;
+    background-position: 0 50%;
+}
+body>footer>div>div a.email {
+    background-image: url('images/email.png');
+}
+body>footer>div>div a.sina {
+    background-image: url('images/weibo.png');
+}
+body>footer>div>div a.taobao {
+    background-image: url('images/taobao.png');
+}
+body>footer>div>div a.facebook {
+    background-image: url('images/facebook.png');
+}
+body>footer>div>div a.twitter {
+    background-image: url('images/twitter.png');
+}
+body>footer>div>div a.phone {
+    background-image: url('images/phone.png');
+}
+#ie_fix{
+    position: fixed;
+    background: #FFFFF0;
+    position: fixed;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    line-height: 2em;
+}
+body>.article {
+    width: 1000px;
+    background: #FFF;
+    margin: 1em auto;
+    border-radius: 8px;
+    padding: 1em;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px #FFF;
+    font-size: 13px;
+}
+body>.article h2 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+body>.article>div>h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #999;
+    line-height: 54px;
+    padding-left: 48px;
+    background: url('images/schedule_48.png') no-repeat;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+body>.article>div {
+    margin: 2em 0;
+}
+body>.article>div>table {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+body>.article>div>table td {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    text-align: left;
+}
+body>.article>div:nth-child(2) {
+    margin: 0;
+}
+body>.article>div>table tr:nth-child(even) {
+    background: #eee;
+}
+body>.article>div>table td:first-child {
+    text-align: center;
+    min-width: 6em;
+}
+body>.article>div.lessons>h4 {
+    background-image: url('images/lessons_48.png');
+}
+body>.article>div>ol li {
+    list-style-type: decimal;
+    line-height: 2em;
+}
+body>.article>div>ol {
+    padding-left: 3em;
+}
+body>.article>div.price>h4 {
+    background-image: url('images/price.png');
+}
+
+body>.article>div.attention>h4 {
+    background-image: url('images/attention.png');
+}
+body>.article>div.body-information>h4 {
+    background-image: url('images/doctor.png');
+}
+body>.article>div.introduction>h4 {
+    background-image: url('images/PADI.jpg');
+}
+body>.article>div.diver>h4 {
+    background-image: url('images/diver.png');
+}
+body>.article>div.users>h4 {
+    background-image: url('images/users.png');
+}
+body>.article>div.certificate>h4 {
+    background-image: url('images/certificate.png');
+}
+body>.article>div.body-information ol{
+    padding-left:4.5em;
+}
+body>.article>div.body-information>p{
+    padding-left: 1.5em;
+    margin-top: 1em;
+}
+body>.article>div>ol.important {
+    background: #F8D9D9;
+    margin: 1em 0;
+    border: 1px solid #962222;
+    color: #FF4949;
+}
+body>.article>div.introduction p {
+    text-indent: 2em;
+    margin: 1em 0;
+}
+body>.article>div>table td ul {
+    width: 800px;
+}
+body>.article>div>table td ul li:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body>.article>div>table td ul li span {
+    float: left;
+}
+body>.article>div>table td ul li span:last-child {
+    width: 700px;
+    margin-left: 1em;
+}
+body>.article>div>table td ul li span:first-child {
+    color: #666;
+}
+body>.article>div>table td ul li {
+    margin: 1em 0;
+}
+body>div {
+    width: 1000px;
+    margin: auto;
+    margin-top: 1em;
+}
+.image-wraper:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.image-wraper .image {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+}
+.image-wraper .image .img {
+    width: 1000px;
+    height: 600px;
+    background-size: 1000px;
+    background-position-y: 50%;
+}
+.image-wraper .image>a {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+    opacity: .5;
+    background: url('images/prev_64.png') no-repeat 0 50%;
+}
+.image-wraper .image>a:hover {
+    opacity: 1;
+}
+.image-wraper .image>a.next {
+    right: 0;
+    background-image: url('images/next_64.png');
+    background-position: 100%;
+}
+.image-wraper .name,.image-wraper .desc {
+    background: #000;
+    color: #FFF;
+    text-align: center;
+    padding: .5em 0;
+}
+.image-wraper .desc {
+    text-align: left;
+    text-indent: 2em;
+    padding: .5em;
+}
+.image-list {
+    position: relative;
+    height: 120px;
+}
+.image-list>div {
+    width: 999px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+.image-list>div>ul {
+    width: 999999px;
+    height: 120px;
+    position: relative;
+    left: 0;
+    -webkit-transition: left .5s;
+}
+.image-list>div>ul>li {
+    float: left;
+    margin-right: 6px;
+    opacity: .5;
+    cursor: pointer;
+}
+.image-list>div>ul>li img {
+    width: 195px;
+}
+.image-list>div>ul>li:nth-child(5n),.image-list>div>ul>li:last-child {
+    margin-right: 0;
+}
+.image-list>div>ul>li:hover,.image-list>div>ul>li.current {
+    opacity: 1;
+}
+.image-list>div>ul>li.current{
+    cursor: default;
+}
+.image-list a {
+    width: 36px;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.44) url('images/prev_32.png') no-repeat 50%;
+    position: absolute;
+    z-index: 999;
+    cursor: pointer;
+    opacity: .5;
+}
+.image-list a:hover {
+    opacity: 1;
+}
+.image-list a.next {
+    background-image: url('images/next_32.png');
+    right: 0;
+}
+.image-wraper .image .loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5) url('images/ajax-loader.gif') no-repeat 50%;
+}

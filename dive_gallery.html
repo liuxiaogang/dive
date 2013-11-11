@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8"/>
+	<head>
+		<title>普吉体验潜水,普吉潜水OW,Phuket Dive Buddy DSD课程,Phuket Dive Buddy OW课程</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a class="home" href="index.html"></a>
+			</div>
+			<div class="language">
+				<a href="en/dive_gallery.html">English Version</a>
+			</div>
+			<nav>
+				<div>
+					<a href="index.html">首页</a>
+					<a href="dsd.html">PADI 体验潜水(DSD)</a>
+					<a href="ow.html">PADI OW 潜水</a>
+					<a href="dive_gallery.html" class="current">OW 潜水图片</a>
+					<a href="shoot_gallery.html">射击图片</a>
+				</div>
+			</nav>
+		</header>
+		<div>
+			<div class="image-wraper">
+				<div class="image">
+					<a title="前一张" class="prev"></a>
+					<a title="后一张" class="next"></a>
+					<div class="img" data-image="boat_to_king.jpg"></div>
+					<div class="loading"></div>
+				</div>
+				<div class="name">去皇帝岛的船</div>
+				<div class="desc">这是上次去去皇帝岛的船,这次出海碰见了大海龟非常的开心</div>
+			</div>
+			<div class="image-list">
+				<a class="prev" title="前一个"></a>
+				<a class="next" title="下一个"></a>
+				<div>
+					<ul>
+						<li class="current"><img src="images/dive_400/boat_to_king.jpg" title="去皇帝岛的船" data-desc="这是上次去去皇帝岛的船,这次出海碰见了大海龟非常的开心"></li>
+						<li><img src="images/dive_400/IMG_0348.jpg" title="IMG_0348"></li>
+						<li><img src="images/dive_400/IMG_0469.jpg" title="IMG_0469"></li>
+						<li><img src="images/dive_400/IMG_6294.jpg" title="IMG_6294"></li>
+						<li><img src="images/dive_400/IMG_6300.jpg" title="IMG_6300"></li>
+						<li><img src="images/dive_400/IMG_6301.jpg" title="IMG_6301"></li>
+						<li><img src="images/dive_400/IMG_6738.jpg" title="IMG_6738"></li>
+						<li><img src="images/dive_400/IMG_6833.jpg" title="IMG_6833"></li>
+						<li><img src="images/dive_400/IMG_6861.jpg" title="IMG_6861"></li>
+						<li><img src="images/dive_400/IMG_7800.jpg" title="IMG_7800"></li>
+						<li><img src="images/dive_400/IMG_7801.jpg" title="IMG_7801"></li>
+						<li><img src="images/dive_400/IMG_7805.jpg" title="IMG_7805"></li>
+						<li><img src="images/dive_400/IMG_7806.jpg" title="IMG_7806"></li>
+						<li><img src="images/dive_400/IMG_7840.jpg" title="IMG_7840"></li>
+						<li><img src="images/dive_400/IMG_7853.jpg" title="IMG_7853"></li>
+						<li><img src="images/dive_400/IMG_7968.jpg" title="IMG_7968"></li>
+						<li><img src="images/dive_400/IMG_8179.jpg" title="IMG_8179"></li>
+						<li><img src="images/dive_400/IMG_8219.jpg" title="IMG_8219"></li>
+						<li><img src="images/dive_400/IMG_8249.jpg" title="IMG_8249"></li>
+						<li><img src="images/dive_400/IMG_8318.jpg" title="IMG_8318"></li>
+						<li><img src="images/dive_400/IMG_8337.jpg" title="IMG_8337"></li>
+						<li><img src="images/dive_400/IMG_8443.jpg" title="IMG_8443"></li>
+						<li><img src="images/dive_400/IMG_8463.jpg" title="IMG_8463"></li>
+						<li><img src="images/dive_400/IMG_8684.jpg" title="IMG_8684"></li>
+						<li><img src="images/dive_400/master_jiang.jpg" title="老蒋" data-desc="英姿飒爽的老蒋,将教练非常的热心"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div>
+				<div>
+					<span></span>
+					<span class="webchat">微信号:245454280</span>
+				</div>
+				<div>
+					<a href="mailto:not-found@qq.com" class="email">not-found@qq.com</a>
+					<a href="#" class="phone">13718354523</a>
+					<a href="#" class="taobao">淘宝网店</a>
+				</div>
+				<div>
+					<a href="#" class="facebook">Facebook</a>
+					<a href="#" class="twitter">Twitter</a>
+					<a href="#" class="sina">新浪微博</a>
+				</div>
+			</div>
+		</footer>
+		<!--[if lt IE 9]>
+		<div id="ie_fix">您在使用过时的浏览器.为了提高您的浏览效率请<a href="http://browsehappy.com">升级浏览器</a>或者<a href="http://www.google.com/chromeframe/?redirect=true">使用Google浏览器内嵌框架</a></div>
+		<![endif]-->
+	</body>
+	<script type="text/javascript">
+	$('<img />').attr('src','images/dive_1024/'+$('.image-wraper .img').data('image')).load(function(){
+		$('.image-wraper .loading').fadeOut();
+		$('.image-wraper .image .img').css('background-image','url("images/dive_1024/'+$('.image-wraper .img').data('image')+'")');
+	});
+	var image_num = $('.image-list li').length;
+	var total = parseInt(image_num / 5);
+	if (image_num % 5 == 0) {
+		total += 1;
+	}
+	$('.image-list .prev').click(function(){
+		if ($('.image-list ul').position().left == 0) {
+			return false;
+		}
+		$('.image-list ul').css('left',($('.image-list ul').position().left + 999) + 'px');
+	});
+	$('.image-list .next').click(function(){
+		if ($('.image-list ul').position().left == ((total-2) * -999)) {
+			return false;
+		}
+		$('.image-list ul').css('left',($('.image-list ul').position().left - 999) + 'px');
+	});
+	$('.image-list li').click(function(){
+		if ($(this).hasClass('current')) {
+			return false;
+		}
+		$('.image-list li').removeClass('current');
+		$(this).addClass('current');
+		var src = $(this).find('img').attr('src').replace('dive_400','dive_1024');
+		var name = $(this).find('img').attr('title');
+		var desc = $(this).find('img').data('desc')||name;
+		$('.image-wraper .loading').fadeIn();
+		$('<img />').attr('src',src).load(function(){
+			$('.image-wraper .loading').fadeOut();
+			$('.image-wraper .image .img').css('background-image','url("' + src + '")');
+			$('.image-wraper .name').html(name);
+			$('.image-wraper .desc').html(desc);
+		});
+	});
+	</script>
+</html>
